@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_app_color"
+    android:fitsSystemWindows="true"
+    tools:context="com.yoursecondworld.secondworld.modular.budget.view.BudgetAct">
+
+    <include layout="@layout/red_titlebar_style_one" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_act_titlebar_container"
+        android:background="@color/gray_six"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30px"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/rl_qiuqiu1"
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_circle_bg1"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/qiuqiu1" />
+
+                <com.yoursecondworld.secondworld.common.view.WaveLoadingView
+                    android:id="@+id/wldv_money"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    app:wlv_borderColor="#D2DFEC"
+                    app:wlv_borderWidth="1dp"
+                    app:wlv_progressValue="50"
+                    app:wlv_round_rectangle="true"
+                    app:wlv_shapeType="circle"
+                    app:wlv_titleTop=""
+                    app:wlv_triangle_direction="north"
+                    app:wlv_waveAmplitude="24"
+                    app:wlv_waveColor="#4D85E2" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/wldv_money"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20px"
+                    android:src="@mipmap/yinying_lan1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao1"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignRight="@+id/wldv_money"
+                    android:layout_alignTop="@+id/iv_circle_bg1"
+                    android:src="@mipmap/paopao1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao2"
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_below="@+id/iv_paopao1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_paopao1"
+                    android:src="@mipmap/paopao2" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao3"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignTop="@+id/iv_circle_bg1"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@+id/iv_circle_bg1"
+                    android:src="@mipmap/paopao1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao4"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignLeft="@+id/iv_paopao3"
+                    android:layout_below="@+id/iv_paopao3"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/paopao3" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao5"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignRight="@+id/iv_paopao4"
+                    android:layout_below="@+id/iv_paopao4"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/paopao4" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rl_qiuqiu1"
+                android:paddingRight="24px">
+
+                <TextView
+                    android:id="@+id/tv_tip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/et_money"
+                    android:text="预算/月"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_two" />
+
+                <EditText
+                    android:id="@+id/et_money"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_tip2"
+                    android:background="@null" />
+
+                <View
+                    android:layout_width="100px"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/et_money"
+                    android:layout_alignRight="@+id/et_money"
+                    android:layout_below="@+id/et_money"
+                    android:background="@color/gray_six" />
+
+                <TextView
+                    android:id="@+id/tv_tip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="元"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_two" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/et_money"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="40px"
+                    android:text="预算每个月只能改一次哦"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_one" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/rl_qiuqiu2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_circle_bg2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/qiuqiu2" />
+
+                <com.yoursecondworld.secondworld.common.view.WaveLoadingView
+                    android:id="@+id/wldv_time"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true"
+                    app:wlv_borderColor="#D2DFEC"
+                    app:wlv_borderWidth="1dp"
+                    app:wlv_progressValue="50"
+                    app:wlv_round_rectangle="true"
+                    app:wlv_shapeType="circle"
+                    app:wlv_titleTop=""
+                    app:wlv_triangle_direction="north"
+                    app:wlv_waveAmplitude="24"
+                    app:wlv_waveColor="#EC437C" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/wldv_time"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20px"
+                    android:src="@mipmap/yinying_hong1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao6"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignRight="@+id/wldv_time"
+                    android:layout_alignTop="@+id/iv_circle_bg2"
+                    android:src="@mipmap/paopao1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao7"
+                    android:layout_width="28px"
+                    android:layout_height="28px"
+                    android:layout_below="@+id/iv_paopao6"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/iv_paopao6"
+                    android:src="@mipmap/paopao2" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao8"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignTop="@+id/iv_circle_bg2"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@+id/iv_circle_bg2"
+                    android:src="@mipmap/paopao1" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao9"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignLeft="@+id/iv_paopao8"
+                    android:layout_below="@+id/iv_paopao8"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/paopao3" />
+
+                <ImageView
+                    android:id="@+id/iv_paopao10"
+                    android:layout_width="24px"
+                    android:layout_height="24px"
+                    android:layout_alignRight="@+id/iv_paopao9"
+                    android:layout_below="@+id/iv_paopao9"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/paopao4" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/rl_qiuqiu2"
+                android:paddingRight="24px">
+
+                <TextView
+                    android:id="@+id/tv_tip3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/et_time"
+                    android:text="预算/时"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_two" />
+
+                <EditText
+                    android:id="@+id/et_time"
+                    android:layout_width="100px"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tv_tip4"
+                    android:background="@null" />
+
+                <View
+                    android:layout_width="100px"
+                    android:layout_height="1dp"
+                    android:layout_alignLeft="@+id/et_time"
+                    android:layout_alignRight="@+id/et_time"
+                    android:layout_below="@+id/et_time"
+                    android:background="@color/gray_six" />
+
+                <TextView
+                    android:id="@+id/tv_tip4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="小时"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_two" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/et_time"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="40px"
+                    android:text="时间每个月只能改一次哦"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/app_text_size_one" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

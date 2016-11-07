@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--最上面的特效文字-->
+    <ImageView
+        android:id="@+id/tv_frag_main_popupwindow_select_game_title"
+        android:layout_width="600px"
+        android:layout_height="30px"
+        android:layout_above="@+id/rv_act_main_popupwindow_select_game"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200px"
+        android:src="@mipmap/act_main_post_dynamics_game_tip" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_act_main_popupwindow_select_game"
+        android:layout_width="match_parent"
+        android:layout_height="640px"
+        android:overScrollMode="never"
+        android:layout_above="@+id/rl_foot" />
+
+    <RelativeLayout
+        android:id="@+id/rl_foot"
+        android:layout_width="match_parent"
+        android:layout_height="76px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_foot_cancel"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/post_dynamics_game_cancel" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

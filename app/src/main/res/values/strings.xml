@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GameMaster</string>
+
+    <array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </array>
+
+    <string name="money1">¥</string>
+
+</resources>
